@@ -1,0 +1,16 @@
+<small><b>&copy; Mahi </b></small>
+<form [formGroup] = "addLoanTypesForm">
+  <input type = "text" formControlName = "loanName" /><br><br>
+  <textarea type = "text" formControlName = "loanDescription"></textarea><br><br>
+  <button [disabled] = addLoanTypesForm.invalid (click) = "addLoanType()" >Add loan type</button><br><br>
+  <button (click) = "setValues()"> Set Values</button>
+  <button (click) = "resetForm()"> Reset Form</button>
+</form>
+
+Valid : {{addLoanTypesForm.valid}}<br><br>
+Invalid : {{addLoanTypesForm.invalid}}<br><br>
+Pristine : {{addLoanTypesForm.pristine}}<br><br>
+Dirty: {{addLoanTypesForm.dirty}}<br><br>
+Touched : {{addLoanTypesForm.touched}}<br><br>
+Untouched : {{addLoanTypesForm.untouched}}<br><br>
+Untouched : {{addLoanTypesForm.get('loanDescription').untouched}}
